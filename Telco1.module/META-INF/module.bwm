@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_OKJf4P3MEeaep_VNmB_7PA" targetNamespace="http://tns.tibco.com/bw/composite/Telco1.module" name="Telco1.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_IiuH4P3NEeaep_VNmB_7PA" name="Telco1-Product" promote="ComponentProcess/Telco1-Product">
+    <sca:interface.wsdl xmi:id="_Ii4f8P3NEeaep_VNmB_7PA" interface="http://xmlns.example.com/20170228104026PLT#wsdl.interface(Telco1-Product)" scaext:wsdlLocation="../Processes/telco1/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_IjF7UP3NEeaep_VNmB_7PA" name="RestService" path="/Telco1/Product" docBasePath="http://localhost:7777/Telco1.module" docResourcePath="Telco1" basePath="/" connector="telco1.module.Process" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/Telco1_1.0.json">
+      <operation xmi:id="_IjLa4P3NEeaep_VNmB_7PA" operationName="get" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_IkXtsP3NEeaep_VNmB_7PA">
+          <parameterMapping xmi:id="_IkYUwP3NEeaep_VNmB_7PA" parameterName="param1" parameterType="Query" dataType="string" required="true" description=""/>
+          <parameterMapping xmi:id="_IkY70P3NEeaep_VNmB_7PA" parameterName="param2" parameterType="Query" dataType="string" required="true" description=""/>
+          <parameterMapping xmi:id="_IkY70f3NEeaep_VNmB_7PA" parameterName="symbols" parameterType="Query" dataType="string" required="true" description=""/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+      </operation>
+      <parameters xmi:id="_IkXGoP3NEeaep_VNmB_7PA"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_IjLa4f3NEeaep_VNmB_7PA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_O0s4wP3MEeaep_VNmB_7PA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_O06UIP3MEeaep_VNmB_7PA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_O0_zsP3MEeaep_VNmB_7PA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_O1EsMP3MEeaep_VNmB_7PA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_O1KLwP3MEeaep_VNmB_7PA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_O1PEQP3MEeaep_VNmB_7PA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_O1TVsP3MEeaep_VNmB_7PA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_OkkLAP3MEeaep_VNmB_7PA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_OkmAMP3MEeaep_VNmB_7PA" processName="telco1.module.Process"/>
+    <sca:service xmi:id="_IipPYP3NEeaep_VNmB_7PA" name="Telco1-Product">
+      <sca:interface.wsdl xmi:id="_Iip2cP3NEeaep_VNmB_7PA" interface="http://xmlns.example.com/20170228104026PLT#wsdl.interface(Telco1-Product)" scaext:wsdlLocation="../Processes/telco1/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
